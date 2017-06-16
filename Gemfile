@@ -40,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'high_voltage'
+gem 'jquery-rails'
 gem 'toastr-rails'
 
 group :development, :test do
