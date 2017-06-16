@@ -17,4 +17,10 @@
 //= require toastr
 //= require_tree .
 
-$(document).on('turbolinks:load', function(){ $(document).foundation(); });
+$(function(){
+  document.addEventListener("turbolinks:load", function(event) {
+    ga('set', 'location', event.data.url);
+    ga('send', 'pageview');
+    $(document).foundation();
+  });
+});
