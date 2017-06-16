@@ -17,7 +17,7 @@ html lang="en"
       meta property="og:url" content=(content_for?(:url) ? yield(:url) : request.url)
       meta property="og:image" content==(content_for?(:image_url) ? yield(:image_url) : "#{request.protocol}#{request.host_with_port}#{image_path("logo-facebook.png")}")
       meta property="og:description" content==strip_tags(content_for?(:description) ? yield(:description) : description)
-      meta name="author" content=(content_for?(:author) ? yield(:author) : "Daniel Weinmann")
+      meta name="author" content=(content_for?(:author) ? yield(:author) : "Revnue")
     / Metatags for every page
     meta property="og:site_name" content="Revnue"
     meta property="fb:app_id" content=ENV["FACEBOOK_APP_ID"]
@@ -41,5 +41,5 @@ html lang="en"
     = render 'layouts/flash'
     .bg-white.border-bottom
       .row.columns
-        h1.dark-gray.small-margin-top Revnue
-    .row.columns= yield
+        h1.small-margin-top= link_to "Revnue", root_path, class: "dark-gray"
+    .row.columns.big-margin-top= yield

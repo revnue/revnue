@@ -2,16 +2,29 @@
 .bg-white
   background-color: $white
 
+.bg-purple
+  background-color: $purple
+
 // Color
 .purple
   color: $purple
 .dark-gray
   color: $dark-gray
+.white
+  color: $white
 
 // Border
 .border-bottom
   border-bottom: 1px solid $light-gray
 
 // Margin
+.margin-top
+  margin-top: 2rem
+
 .small-margin-top
   margin-top: 0.5rem
+
+.big-margin-top
+  margin-top: 3rem
+  @include breakpoint(medium up)
+    margin-top: 4rem
